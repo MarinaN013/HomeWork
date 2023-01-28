@@ -11,15 +11,12 @@ void FillArray(int[] array)
         array[index] = new Random().Next(1,100);
         Console.Write($"{array[index]}, ");
         index++;
-        
     }
     Console.WriteLine();
 }
-
 int[] array = new int[8];
 FillArray(array);
 int b=0;
-
 void DivideArray(int[] array)
 {
     int[] array1 = new int[5];
@@ -41,10 +38,6 @@ void DivideArray(int[] array)
             b=array[i];
             Console.Write($"{b}, ");
         }
-         
-         
     }
-    
 }
-
- DivideArray(array);
+DivideArray(array);
