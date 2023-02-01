@@ -19,7 +19,6 @@ int GetLengthNumber(int num)
         a=num%10;
         sum=sum+a;
         num=num/10;
-
     }
     return sum;
 }
