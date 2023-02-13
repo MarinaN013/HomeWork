@@ -1,5 +1,8 @@
 ﻿/*Задача. Создать игру тетрис.*/
 Random rnd = new Random();
+TimerCallback timeCB = new TimerCallback(ShiftDownFigure);
+Timer t = new Timer(timeCB,  null,   500,   1000);  
+Console.ReadLine();
 
 void LoadMatrix(int[,] matrix)
 {
@@ -157,7 +160,10 @@ void ShiftFigure(int[,] matrix, int valshift)//провера на сдвиг, �
 
     }
 }
-void ShiftDownFigure(int[,] matrix) // опускаем вниз
+
+
+
+void ShiftDownFigure(object? obj, int[,] matrix ) // опускаем вниз  int[,] matrix, object? obj
 {
     for (int i = 7; i >=0; i--)//????? проверка на сдвиг вниз
     {
@@ -271,14 +277,13 @@ while (f<10)
         }
         //TimerShiftDown(object );
 
-        //bool TimerShiftDown(object state)
         
         int p=CheckShiftDown(matrix);
         //Console.WriteLine(p);
        
          if (p==0)//проверка на сдвиг вниз
          {
-            ShiftDownFigure(matrix);//сдвигаем вниз
+            ShiftDownFigure(null,matrix);//сдвигаем вниз
             PrintMatrix(matrix);
             Console.WriteLine();
             int p1=CheckShiftDown(matrix);

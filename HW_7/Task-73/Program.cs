@@ -30,11 +30,8 @@ void Average(int[,] matrix, double[] avr)
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
             sum=sum+matrix[i,j];
-            if (i==row-1)
-            {
-                avr [j]=sum/row;
-            }
-        }
+        } 
+        avr [j]=sum/row;
     }
 }
 

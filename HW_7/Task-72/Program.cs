@@ -10,7 +10,7 @@ Console.WriteLine("Введите индекс строки:");
 int indexRow = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Введите индекс столбца:");
-int ndexColumn = Convert.ToInt32(Console.ReadLine());
+int indexColumn = Convert.ToInt32(Console.ReadLine());
 
 int column=4;
 int row = 3;
@@ -31,9 +31,9 @@ void FillArray (int[,] matrix)
 
 void PrintValue(int[,] matrix)
 {
-    if (indexRow>=0&&indexRow<row&&ndexColumn>=0&&ndexColumn<column)
+    if (indexRow>=0&&indexRow<row&&indexColumn>=0&&indexColumn<column)
     {
-        Console.WriteLine(matrix[indexRow,ndexColumn]);
+        Console.WriteLine(matrix[indexRow,indexColumn]);
     }
     else
     {
