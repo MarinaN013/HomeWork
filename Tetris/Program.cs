@@ -1,7 +1,7 @@
 ﻿/*Задача. Создать игру тетрис.*/
 Random rnd = new Random();
-TimerCallback timeCB = new TimerCallback(ShiftDownFigure);
-Timer t = new Timer(timeCB,  null,   500,   1000);  
+//TimerCallback timeCB = new TimerCallback(ShiftDownFigure);
+//Timer t = new Timer(timeCB,  null,   500,   1000);  
 Console.ReadLine();
 
 void LoadMatrix(int[,] matrix)
