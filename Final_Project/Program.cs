@@ -1,6 +1,6 @@
 ﻿
 Console.WriteLine("Введите строку символов, разделенных запятыми");
-string text = Console.ReadLine();
+string text = Console.ReadLine()!;
 string[] words = text.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
 
 int FindSumString (string [] words) //Находим сумму элементов, кторые меньше или равны 3
@@ -29,15 +29,7 @@ foreach (string s in words)
   }
 }
 
-void PrintNewArr(string [] newArr )//Выводим на консоль все строки нового массива
-{
-for (int j = 0; j < newArr.Length; j++)
-{
-    Console.Write($"{newArr[j]} ");
-}
-}
-
 int count=FindSumString(words);
 string[] newArr = new string[count];
 CreateNewArr(words,newArr);
-PrintNewArr(newArr);
+Console.WriteLine( "[{0}]", string.Join(", ", newArr));
