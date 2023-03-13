@@ -6,14 +6,15 @@
 n = int(input("Введите кол-во долек по горизнтали- "))
 m = int(input("Введите кол-во долек по вертикали- "))
 k = int(input("Сколько нужно отломить долек- "))
-
-if n<=m:
-    sum=n
-else: sum=m
-a=sum
-while sum<n*m:
-    if sum==k:
-        print("Yes")
-        break
-    sum+=a
-else: print("NO") 
+if n>0 and m>0 and k<m*n:
+    if n<=m:
+        sum=n
+    else: sum=m
+    a=sum
+    while sum<n*m:
+        if sum==k:
+            print("Yes")
+            break
+        sum+=a
+    else: print("NO")
+else:print("NO")
